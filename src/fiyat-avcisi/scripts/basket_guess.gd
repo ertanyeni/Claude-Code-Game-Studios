@@ -1,75 +1,110 @@
 extends Control
 
-## "Sepet Tahmini" oyun modu.
-## Ürünleri sepete ekle, toplam tutarı tahmin et.
-
-const PRODUCT_ICONS := {
-	"milk": "🥛", "bread": "🍞", "egg": "🥚", "cheese": "🧀",
-	"olive": "🫒", "tea": "🍵", "sugar": "🍬", "flour": "🌾",
-	"oil": "🫗", "pasta": "🍝", "rice": "🍚", "chicken": "🍗",
-	"tomato": "🍅", "potato": "🥔", "banana": "🍌", "detergent": "🧴",
-	"paper": "🧻", "diaper": "👶", "cola": "🥤", "coffee": "☕",
-	"chocolate": "🍫", "chips": "🥨", "shampoo": "🧴", "toothpaste": "🪥",
-	"yogurt": "🥛", "butter": "🧈", "chickpea": "🫘", "lentil": "🫘",
-	"paste": "🥫", "honey": "🍯",
-}
+## "Sepet Tahmini" oyun modu — programatik UI.
 
 const BASKET_SIZE := 6
 
-@onready var round_label: Label = $VBox/TopBar/RoundLabel
-@onready var score_label: Label = $VBox/TopBar/ScoreLabel
-@onready var store_info: Label = $VBox/StoreInfo
-@onready var product_icon: Label = $VBox/ProductPanel/ProductVBox/ProductIcon
-@onready var product_name: Label = $VBox/ProductPanel/ProductVBox/ProductName
-@onready var add_btn: Button = $VBox/AddBtn
-@onready var basket_list: Label = $VBox/BasketList
-@onready var guess_section: VBoxContainer = $VBox/GuessSection
-@onready var guess_label: Label = $VBox/GuessSection/GuessLabel
-@onready var guess_slider: HSlider = $VBox/GuessSection/GuessSlider
-@onready var submit_btn: Button = $VBox/GuessSection/SubmitBtn
-@onready var feedback_label: Label = $VBox/FeedbackLabel
-@onready var result_section: VBoxContainer = $VBox/ResultSection
-@onready var result_text: Label = $VBox/ResultSection/ResultText
-@onready var continue_btn: Button = $VBox/ResultSection/ContinueBtn
-@onready var back_btn: Button = $VBox/TopBar/BackBtn
-@onready var product_panel: PanelContainer = $VBox/ProductPanel
+var round_label: Label
+var score_label: Label
+var store_info_label: Label
+var basket_list_label: Label
+var feedback_label: Label
+var guess_label: Label
+var product_card_parent: VBoxContainer
+var add_btn: Button
+var guess_section: VBoxContainer
+var result_section: VBoxContainer
+var result_text: Label
+var guess_slider: HSlider
 
 var basket_products: Array[Dictionary] = []
 var current_product: Dictionary
 var selected_store: String
 var product_queue: Array[Dictionary] = []
 var basket_total := 0.0
-var rounds_played := 0
 
 
 func _ready() -> void:
 	GameManager.start_new_game()
-	add_btn.pressed.connect(_on_add_to_basket)
-	submit_btn.pressed.connect(_on_submit_guess)
-	continue_btn.pressed.connect(_start_new_round)
+
+	UIFactory.make_bg(self)
+	var vbox := UIFactory.make_vbox(self, 10)
+
+	# Üst bar
+	var top := UIFactory.make_hbox(vbox, 8)
+	var back_btn := UIFactory.make_button(top, "◀", UIFactory.COLORS.bg_card_light, 44)
+	back_btn.custom_minimum_size.x = 50
+	back_btn.size_flags_horizontal = Control.SIZE_SHRINK_BEGIN
 	back_btn.pressed.connect(_on_back)
-	guess_slider.value_changed.connect(_on_slider_changed)
+
+	round_label = UIFactory.make_label(top, "🧺 Sepet: 0/6", 18, UIFactory.COLORS.text_white)
+	round_label.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	score_label = UIFactory.make_label(top, "⭐ 0", 18, UIFactory.COLORS.accent_yellow)
+
+	# Mağaza bilgisi
+	store_info_label = UIFactory.make_label(vbox, "", 16, UIFactory.COLORS.accent_blue)
+
+	# Ürün kartı alanı
+	product_card_parent = VBoxContainer.new()
+	product_card_parent.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	vbox.add_child(product_card_parent)
+
+	# Sepete ekle butonu
+	add_btn = UIFactory.make_button(vbox, "🛒  Sepete At!", UIFactory.COLORS.accent_green, 56)
+	add_btn.pressed.connect(_on_add_to_basket)
+
+	# Sepet listesi
+	var basket_card := UIFactory.make_card(vbox, Color(0.1, 0.12, 0.18))
+	basket_list_label = UIFactory.make_label(basket_card, "Sepet boş... Doldur bakalım! 🛒", 15, UIFactory.COLORS.text_dim)
+
+	# Tahmin bölümü (gizli)
+	guess_section = VBoxContainer.new()
+	guess_section.add_theme_constant_override("separation", 12)
+	guess_section.visible = false
+	guess_section.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	vbox.add_child(guess_section)
+
+	UIFactory.make_label(guess_section, "💰 Bu sepetin tutarı ne kadar?", 20, UIFactory.COLORS.accent_yellow)
+	guess_label = UIFactory.make_label(guess_section, "₺ 150.00", 32, UIFactory.COLORS.text_white)
+	guess_slider = UIFactory.make_slider(guess_section, 10, 2000, 5)
+	guess_slider.value_changed.connect(func(v: float): guess_label.text = "₺ %.2f" % v)
+
+	var submit_btn := UIFactory.make_button(guess_section, "🎯  Tahminimi Gönder!", UIFactory.COLORS.accent_orange, 56)
+	submit_btn.pressed.connect(_on_submit_guess)
+
+	# Sonuç bölümü (gizli)
+	result_section = VBoxContainer.new()
+	result_section.add_theme_constant_override("separation", 10)
+	result_section.visible = false
+	result_section.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	vbox.add_child(result_section)
+
+	result_text = UIFactory.make_label(result_section, "", 18, UIFactory.COLORS.text_white)
+	var cont_btn := UIFactory.make_button(result_section, "🔄  Yeni Sepet!", UIFactory.COLORS.accent_blue, 56)
+	cont_btn.pressed.connect(_start_new_round)
+
+	# Feedback
+	feedback_label = UIFactory.make_label(vbox, "", 16, UIFactory.COLORS.accent_green)
+
 	_start_new_round()
 
 
 func _start_new_round() -> void:
 	basket_products.clear()
 	basket_total = 0.0
-	rounds_played += 1
 	feedback_label.text = ""
 	result_section.visible = false
 	guess_section.visible = false
-	product_panel.visible = true
+	product_card_parent.visible = true
 	add_btn.visible = true
 
-	# Rastgele mağaza seç
 	var store_ids := ProductDatabase.stores.keys()
 	selected_store = store_ids[randi() % store_ids.size()]
-	var store_name := ProductDatabase.get_store_name(selected_store)
+	var name := ProductDatabase.get_store_name(selected_store)
+	var emoji := ProductDatabase.get_store_emoji(selected_store)
 	var joke := FunMessages.get_store_joke(selected_store)
-	store_info.text = "🏪 %s'ta alışverişteyiz!\n%s" % [store_name, joke]
+	store_info_label.text = "%s %s'ta alışverişteyiz!\n%s" % [emoji, name, joke]
 
-	# Ürün kuyruğu
 	product_queue = ProductDatabase.get_random_products(BASKET_SIZE)
 	_show_next_product()
 	_update_basket_display()
@@ -81,19 +116,14 @@ func _show_next_product() -> void:
 		return
 
 	current_product = product_queue.pop_front()
-	var icon_key: String = current_product.get("icon", "")
-	product_icon.text = PRODUCT_ICONS.get(icon_key, "📦")
-	product_name.text = current_product.get("name", "???")
-	round_label.text = "🧺 Sepet: %d/%d ürün" % [basket_products.size(), BASKET_SIZE]
+	round_label.text = "🧺 Sepet: %d/%d" % [basket_products.size(), BASKET_SIZE]
 
-	var fun_texts := [
-		"🛒 Sepete At!",
-		"🛒 Bunu da Alalım!",
-		"🛒 Hop Sepete!",
-		"🛒 Bu Lazım!",
-		"🛒 Atıyorum!",
-	]
-	add_btn.text = fun_texts[randi() % fun_texts.size()]
+	for child in product_card_parent.get_children():
+		child.queue_free()
+	UIFactory.make_product_card(product_card_parent, current_product, ProductDatabase)
+
+	var texts := ["🛒 Sepete At!", "🛒 Bunu da Alalım!", "🛒 Hop Sepete!", "🛒 Bu Lazım!"]
+	add_btn.text = texts[randi() % texts.size()]
 
 
 func _on_add_to_basket() -> void:
@@ -106,57 +136,43 @@ func _on_add_to_basket() -> void:
 
 func _update_basket_display() -> void:
 	if basket_products.is_empty():
-		basket_list.text = "Sepet boş... Doldur bakalım! 🛒"
+		basket_list_label.text = "Sepet boş... Doldur bakalım! 🛒"
 		return
-
 	var text := "📋 Sepetindekiler:\n"
 	for p in basket_products:
-		var icon_key: String = p.get("icon", "")
-		var icon: String = PRODUCT_ICONS.get(icon_key, "📦")
-		text += "%s %s\n" % [icon, p.get("name", "")]
-	basket_list.text = text.strip_edges()
+		var icon := UIFactory.get_product_icon(p.get("icon", ""))
+		var brand: String = p.get("brand", "")
+		text += "%s %s (%s)\n" % [icon, p.get("name", ""), brand]
+	basket_list_label.text = text.strip_edges()
 
 
 func _show_guess_phase() -> void:
-	product_panel.visible = false
+	product_card_parent.visible = false
 	add_btn.visible = false
 	guess_section.visible = true
 	round_label.text = "🧺 Sepet dolu! Tahmin zamanı!"
 
-	# Slider aralığını ayarla
-	var min_guess := maxf(10.0, basket_total * 0.4)
-	var max_guess := basket_total * 1.8
-	guess_slider.min_value = snappedi(int(min_guess), 5)
-	guess_slider.max_value = snappedi(int(max_guess), 5)
-	guess_slider.value = snappedi(int((min_guess + max_guess) / 2.0), 5)
-	_on_slider_changed(guess_slider.value)
-
-	var fun_asks := [
-		"💰 Bu sepetin tutarını tahmin et!\nİçinden gel!",
-		"💰 Kasada ne kadar ödeyeceksin?\nHadi bakalım!",
-		"💰 Toplam tutar ne?\nTeyze hesabını yapsın!",
-	]
-	$VBox/GuessSection/GuessTitle.text = fun_asks[randi() % fun_asks.size()]
-
-
-func _on_slider_changed(value: float) -> void:
-	guess_label.text = "₺ %.2f" % value
+	var min_g := maxf(10.0, basket_total * 0.4)
+	var max_g := basket_total * 1.8
+	guess_slider.min_value = snappedi(int(min_g), 5)
+	guess_slider.max_value = snappedi(int(max_g), 5)
+	guess_slider.value = snappedi(int((min_g + max_g) / 2.0), 5)
+	guess_label.text = "₺ %.2f" % guess_slider.value
 
 
 func _on_submit_guess() -> void:
 	var guess: float = guess_slider.value
 	var diff := absf(guess - basket_total)
-	var accuracy_percent := (diff / basket_total) * 100.0
+	var pct := (diff / basket_total) * 100.0
+	var xp := GameManager.add_guess_score(pct)
 
-	var xp_earned := GameManager.add_guess_score(accuracy_percent)
+	var r := "🧾 Gerçek Tutar: ₺%.2f\n" % basket_total
+	r += "🎯 Senin Tahmin: ₺%.2f\n" % guess
+	r += "📏 Fark: ₺%.2f (%%%.1f)\n\n" % [diff, pct]
+	r += FunMessages.get_basket_message(pct)
+	r += "\n\n+%d XP kazandın!" % xp
 
-	var result := "🧾 Gerçek Tutar: ₺%.2f\n" % basket_total
-	result += "🎯 Senin Tahmin: ₺%.2f\n" % guess
-	result += "📏 Fark: ₺%.2f (%%%s)\n\n" % [diff, "%.1f" % accuracy_percent]
-	result += FunMessages.get_basket_message(accuracy_percent)
-	result += "\n\n+%d XP kazandın!" % xp_earned
-
-	result_text.text = result
+	result_text.text = r
 	guess_section.visible = false
 	result_section.visible = true
 	score_label.text = "⭐ %d" % GameManager.current_score

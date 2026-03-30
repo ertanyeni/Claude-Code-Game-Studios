@@ -1,10 +1,14 @@
 {
   "products": [
     {
-      "id": "sut_1lt",
-      "name": "Süt (1 Lt)",
+      "id": "pinar_sut_1lt",
+      "name": "Pınar Süt 1 Lt",
+      "brand": "Pınar",
+      "weight": "1 Lt",
       "category": "Süt Ürünleri",
+      "description": "Pastörize günlük süt, tam yağlı",
       "icon": "milk",
+      "barcode": "8690527001295",
       "prices": {
         "B101": 42.90,
         "DİM": 41.50,
@@ -15,24 +19,32 @@
       }
     },
     {
-      "id": "ekmek",
-      "name": "Ekmek (Tam Buğday)",
-      "category": "Fırın",
+      "id": "uno_ekmek",
+      "name": "Uno Tam Buğday Ekmek 350g",
+      "brand": "Uno",
+      "weight": "350g",
+      "category": "Fırın Ürünleri",
+      "description": "Tam buğday unlu, dilimli tost ekmeği",
       "icon": "bread",
+      "barcode": "8690742000000",
       "prices": {
-        "B101": 18.00,
-        "DİM": 17.50,
-        "BAM": 19.00,
-        "Makros": 22.50,
-        "Trendiol": 21.00,
-        "Hepsimarka": 20.50
+        "B101": 32.50,
+        "DİM": 30.90,
+        "BAM": 33.00,
+        "Makros": 37.50,
+        "Trendiol": 35.00,
+        "Hepsimarka": 36.50
       }
     },
     {
-      "id": "yumurta_15",
-      "name": "Yumurta (15'li)",
+      "id": "yumurta_keskinoglu_15",
+      "name": "Keşkinoğlu Yumurta 15'li M Boy",
+      "brand": "Keşkinoğlu",
+      "weight": "15 adet",
       "category": "Kahvaltılık",
+      "description": "Gezen tavuk, M boy köy yumurtası",
       "icon": "egg",
+      "barcode": "8690828000000",
       "prices": {
         "B101": 84.90,
         "DİM": 82.50,
@@ -43,10 +55,14 @@
       }
     },
     {
-      "id": "peynir_beyaz",
-      "name": "Beyaz Peynir (500g)",
+      "id": "pinar_beyaz_peynir",
+      "name": "Pınar Beyaz Peynir 500g",
+      "brand": "Pınar",
+      "weight": "500g",
       "category": "Süt Ürünleri",
+      "description": "Tam yağlı olgunlaştırılmış beyaz peynir",
       "icon": "cheese",
+      "barcode": "8690527005101",
       "prices": {
         "B101": 109.90,
         "DİM": 104.50,
@@ -57,10 +73,14 @@
       }
     },
     {
-      "id": "zeytin_siyah",
-      "name": "Siyah Zeytin (500g)",
+      "id": "komili_zeytin",
+      "name": "Komili Siyah Zeytin Süper 500g",
+      "brand": "Komili",
+      "weight": "500g",
       "category": "Kahvaltılık",
+      "description": "Gemlik tipi, doğal salamura siyah zeytin",
       "icon": "olive",
+      "barcode": "8690575010001",
       "prices": {
         "B101": 79.90,
         "DİM": 74.50,
@@ -71,10 +91,14 @@
       }
     },
     {
-      "id": "cay_1kg",
-      "name": "Çay (1 Kg)",
+      "id": "caykur_rize",
+      "name": "Çaykur Rize Çayı 1 Kg",
+      "brand": "Çaykur",
+      "weight": "1 Kg",
       "category": "İçecek",
+      "description": "Geleneksel Rize siyah çayı, dökme",
       "icon": "tea",
+      "barcode": "8690105000000",
       "prices": {
         "B101": 189.90,
         "DİM": 179.50,
@@ -85,10 +109,14 @@
       }
     },
     {
-      "id": "seker_1kg",
-      "name": "Toz Şeker (1 Kg)",
+      "id": "toren_seker",
+      "name": "Torku Toz Şeker 1 Kg",
+      "brand": "Torku",
+      "weight": "1 Kg",
       "category": "Temel Gıda",
+      "description": "Kristal beyaz toz şeker",
       "icon": "sugar",
+      "barcode": "8690120000000",
       "prices": {
         "B101": 42.50,
         "DİM": 39.90,
@@ -99,10 +127,14 @@
       }
     },
     {
-      "id": "un_2kg",
-      "name": "Un (2 Kg)",
+      "id": "sinangil_un",
+      "name": "Sinangil Un 2 Kg",
+      "brand": "Sinangil",
+      "weight": "2 Kg",
       "category": "Temel Gıda",
+      "description": "Genel amaçlı buğday unu, tip 1",
       "icon": "flour",
+      "barcode": "8690554000000",
       "prices": {
         "B101": 54.90,
         "DİM": 49.50,
@@ -113,10 +145,14 @@
       }
     },
     {
-      "id": "ayc_yagi_1lt",
-      "name": "Ayçiçek Yağı (1 Lt)",
+      "id": "yudum_aycicek",
+      "name": "Yudum Ayçiçek Yağı 1 Lt",
+      "brand": "Yudum",
+      "weight": "1 Lt",
       "category": "Temel Gıda",
+      "description": "Rafine ayçiçek yağı, ilk sıkım",
       "icon": "oil",
+      "barcode": "8690632000000",
       "prices": {
         "B101": 109.90,
         "DİM": 104.50,
@@ -127,10 +163,14 @@
       }
     },
     {
-      "id": "makarna_500g",
-      "name": "Makarna (500g)",
+      "id": "nuh_makarna",
+      "name": "Nuh'un Ankara Burgu Makarna 500g",
+      "brand": "Nuh'un Ankara",
+      "weight": "500g",
       "category": "Temel Gıda",
+      "description": "Sert buğday irmiğinden burgu makarna",
       "icon": "pasta",
+      "barcode": "8690793000000",
       "prices": {
         "B101": 29.90,
         "DİM": 27.50,
@@ -141,10 +181,14 @@
       }
     },
     {
-      "id": "pirinc_1kg",
-      "name": "Pirinç (1 Kg)",
+      "id": "reis_pirinc",
+      "name": "Reis Gönen Baldo Pirinç 1 Kg",
+      "brand": "Reis",
+      "weight": "1 Kg",
       "category": "Temel Gıda",
+      "description": "Gönen baldo pirinç, pilav için ideal",
       "icon": "rice",
+      "barcode": "8690101000000",
       "prices": {
         "B101": 69.90,
         "DİM": 64.50,
@@ -155,10 +199,14 @@
       }
     },
     {
-      "id": "tavuk_gogsu",
-      "name": "Tavuk Göğsü (1 Kg)",
+      "id": "banvit_tavuk",
+      "name": "Banvit Tavuk Göğsü 1 Kg",
+      "brand": "Banvit",
+      "weight": "1 Kg",
       "category": "Et & Tavuk",
+      "description": "Taze tavuk göğüs fileto, kemiksiz",
       "icon": "chicken",
+      "barcode": "8691070000000",
       "prices": {
         "B101": 169.90,
         "DİM": 159.50,
@@ -169,10 +217,14 @@
       }
     },
     {
-      "id": "domates_1kg",
-      "name": "Domates (1 Kg)",
+      "id": "domates_kg",
+      "name": "Domates Sofralık 1 Kg",
+      "brand": "Taze Meyve/Sebze",
+      "weight": "1 Kg",
       "category": "Meyve & Sebze",
+      "description": "Mevsim domatesi, sofralık sert boy",
       "icon": "tomato",
+      "barcode": "0000000000000",
       "prices": {
         "B101": 34.90,
         "DİM": 29.90,
@@ -183,10 +235,14 @@
       }
     },
     {
-      "id": "patates_1kg",
-      "name": "Patates (1 Kg)",
+      "id": "patates_kg",
+      "name": "Patates Taze 1 Kg",
+      "brand": "Taze Meyve/Sebze",
+      "weight": "1 Kg",
       "category": "Meyve & Sebze",
+      "description": "Yemeklik taze patates",
       "icon": "potato",
+      "barcode": "0000000000001",
       "prices": {
         "B101": 24.90,
         "DİM": 22.50,
@@ -197,10 +253,14 @@
       }
     },
     {
-      "id": "muz_1kg",
-      "name": "Muz (1 Kg)",
+      "id": "chiquita_muz",
+      "name": "Chiquita Muz 1 Kg",
+      "brand": "Chiquita",
+      "weight": "1 Kg",
       "category": "Meyve & Sebze",
+      "description": "İthal Ekvador muzu, olgun",
       "icon": "banana",
+      "barcode": "0000000000002",
       "prices": {
         "B101": 64.90,
         "DİM": 59.50,
@@ -211,24 +271,32 @@
       }
     },
     {
-      "id": "deterjan_3lt",
-      "name": "Çamaşır Deterjanı (3 Lt)",
+      "id": "persil_deterjan",
+      "name": "Persil Power Jel 3 Lt",
+      "brand": "Persil",
+      "weight": "3 Lt",
       "category": "Temizlik",
+      "description": "Sıvı çamaşır deterjanı, gül kokulu",
       "icon": "detergent",
+      "barcode": "8690506000000",
       "prices": {
-        "B101": 159.90,
-        "DİM": 149.50,
-        "BAM": 164.00,
-        "Makros": 184.90,
-        "Trendiol": 169.00,
-        "Hepsimarka": 174.50
+        "B101": 259.90,
+        "DİM": 249.50,
+        "BAM": 264.00,
+        "Makros": 289.90,
+        "Trendiol": 269.00,
+        "Hepsimarka": 279.50
       }
     },
     {
-      "id": "tuvalet_kagidi_24",
-      "name": "Tuvalet Kağıdı (24'lü)",
+      "id": "solo_tuvalet",
+      "name": "Solo Tuvalet Kağıdı 24'lü",
+      "brand": "Solo",
+      "weight": "24 rulo",
       "category": "Temizlik",
+      "description": "3 katlı, extra yumuşak tuvalet kağıdı",
       "icon": "paper",
+      "barcode": "8690530000000",
       "prices": {
         "B101": 219.90,
         "DİM": 209.50,
@@ -239,24 +307,32 @@
       }
     },
     {
-      "id": "bebek_bezi_40",
-      "name": "Bebek Bezi (40'lı)",
+      "id": "prima_bezi",
+      "name": "Prima Aktif Bebek Bezi 4 Numara 40'lı",
+      "brand": "Prima",
+      "weight": "40 adet",
       "category": "Bebek",
+      "description": "Maxi beden (8-14 kg), gece/gündüz",
       "icon": "diaper",
+      "barcode": "8001841000000",
       "prices": {
-        "B101": 289.90,
-        "DİM": 274.50,
-        "BAM": 294.00,
-        "Makros": 329.90,
-        "Trendiol": 299.00,
-        "Hepsimarka": 314.50
+        "B101": 389.90,
+        "DİM": 374.50,
+        "BAM": 394.00,
+        "Makros": 429.90,
+        "Trendiol": 399.00,
+        "Hepsimarka": 414.50
       }
     },
     {
-      "id": "kola_1lt",
-      "name": "Kola (1 Lt)",
+      "id": "cocacola_1lt",
+      "name": "Coca-Cola 1 Lt",
+      "brand": "Coca-Cola",
+      "weight": "1 Lt",
       "category": "İçecek",
+      "description": "Gazlı kola içeceği, klasik",
       "icon": "cola",
+      "barcode": "8690548000000",
       "prices": {
         "B101": 39.90,
         "DİM": 37.50,
@@ -267,10 +343,14 @@
       }
     },
     {
-      "id": "kahve_100g",
-      "name": "Türk Kahvesi (100g)",
+      "id": "kurukahveci_mehmet",
+      "name": "Kurukahveci Mehmet Efendi 100g",
+      "brand": "Mehmet Efendi",
+      "weight": "100g",
       "category": "İçecek",
+      "description": "Geleneksel Türk kahvesi, orta kavrulmuş",
       "icon": "coffee",
+      "barcode": "8690627000000",
       "prices": {
         "B101": 74.90,
         "DİM": 69.50,
@@ -281,24 +361,32 @@
       }
     },
     {
-      "id": "cikolata_bar",
-      "name": "Çikolata Bar (80g)",
+      "id": "ulker_cikolata",
+      "name": "Ülker Çikolatalı Gofret 36g",
+      "brand": "Ülker",
+      "weight": "36g",
       "category": "Atıştırmalık",
+      "description": "Sütlü çikolata kaplı gofret",
       "icon": "chocolate",
+      "barcode": "8690504000000",
       "prices": {
-        "B101": 24.90,
-        "DİM": 22.50,
-        "BAM": 26.00,
-        "Makros": 29.90,
-        "Trendiol": 27.00,
-        "Hepsimarka": 28.50
+        "B101": 14.90,
+        "DİM": 13.50,
+        "BAM": 15.50,
+        "Makros": 17.90,
+        "Trendiol": 16.00,
+        "Hepsimarka": 16.50
       }
     },
     {
-      "id": "cips_paket",
-      "name": "Cips (150g)",
+      "id": "lays_cips",
+      "name": "Lay's Fırından Klasik 96g",
+      "brand": "Lay's",
+      "weight": "96g",
       "category": "Atıştırmalık",
+      "description": "Fırında pişirilmiş patates cipsi, az yağlı",
       "icon": "chips",
+      "barcode": "8690637000000",
       "prices": {
         "B101": 42.90,
         "DİM": 39.50,
@@ -309,24 +397,32 @@
       }
     },
     {
-      "id": "sampuan_400ml",
-      "name": "Şampuan (400ml)",
+      "id": "clear_sampuan",
+      "name": "Clear Men Şampuan 485ml",
+      "brand": "Clear",
+      "weight": "485ml",
       "category": "Kişisel Bakım",
+      "description": "Kepeğe karşı etkili erkek şampuanı, mentol",
       "icon": "shampoo",
+      "barcode": "8690637090002",
       "prices": {
-        "B101": 119.90,
-        "DİM": 109.50,
-        "BAM": 124.00,
-        "Makros": 139.90,
-        "Trendiol": 129.00,
-        "Hepsimarka": 134.50
+        "B101": 139.90,
+        "DİM": 129.50,
+        "BAM": 144.00,
+        "Makros": 159.90,
+        "Trendiol": 149.00,
+        "Hepsimarka": 154.50
       }
     },
     {
-      "id": "dis_macunu",
-      "name": "Diş Macunu (100ml)",
+      "id": "colgate_dis",
+      "name": "Colgate Üçlü Etki 100ml",
+      "brand": "Colgate",
+      "weight": "100ml",
       "category": "Kişisel Bakım",
+      "description": "Diş macunu, üçlü koruma formülü",
       "icon": "toothpaste",
+      "barcode": "8693495037709",
       "prices": {
         "B101": 64.90,
         "DİM": 59.50,
@@ -337,10 +433,14 @@
       }
     },
     {
-      "id": "yogurt_1kg",
-      "name": "Yoğurt (1 Kg)",
+      "id": "sutas_yogurt",
+      "name": "Sütaş Yoğurt 1 Kg",
+      "brand": "Sütaş",
+      "weight": "1 Kg",
       "category": "Süt Ürünleri",
+      "description": "Tam yağlı kaymaklı ev yoğurdu",
       "icon": "yogurt",
+      "barcode": "8690524000000",
       "prices": {
         "B101": 59.90,
         "DİM": 54.50,
@@ -351,10 +451,14 @@
       }
     },
     {
-      "id": "tereyag_250g",
-      "name": "Tereyağı (250g)",
+      "id": "tat_tereyag",
+      "name": "Tat Tereyağı 250g",
+      "brand": "Tat",
+      "weight": "250g",
       "category": "Süt Ürünleri",
+      "description": "Pastörize krema tereyağı",
       "icon": "butter",
+      "barcode": "8690635000000",
       "prices": {
         "B101": 84.90,
         "DİM": 79.50,
@@ -365,10 +469,14 @@
       }
     },
     {
-      "id": "nohut_1kg",
-      "name": "Nohut (1 Kg)",
+      "id": "duru_nohut",
+      "name": "Duru Nohut 1 Kg",
+      "brand": "Duru",
+      "weight": "1 Kg",
       "category": "Bakliyat",
+      "description": "9mm kalibre iri taneli Türk nohut",
       "icon": "chickpea",
+      "barcode": "8691440000000",
       "prices": {
         "B101": 54.90,
         "DİM": 49.50,
@@ -379,10 +487,14 @@
       }
     },
     {
-      "id": "mercimek_1kg",
-      "name": "Kırmızı Mercimek (1 Kg)",
+      "id": "yayla_mercimek",
+      "name": "Yayla Kırmızı Mercimek 1 Kg",
+      "brand": "Yayla",
+      "weight": "1 Kg",
       "category": "Bakliyat",
+      "description": "Yemeklik ve çorbalık kırmızı mercimek",
       "icon": "lentil",
+      "barcode": "8691440100000",
       "prices": {
         "B101": 59.90,
         "DİM": 54.50,
@@ -393,10 +505,14 @@
       }
     },
     {
-      "id": "salca_700g",
-      "name": "Domates Salçası (700g)",
+      "id": "tat_salca",
+      "name": "Tat Domates Salçası 700g",
+      "brand": "Tat",
+      "weight": "700g",
       "category": "Temel Gıda",
+      "description": "Doğal domates salçası, cam kavanoz",
       "icon": "paste",
+      "barcode": "8690635070000",
       "prices": {
         "B101": 64.90,
         "DİM": 59.50,
@@ -407,17 +523,93 @@
       }
     },
     {
-      "id": "bal_450g",
-      "name": "Süzme Bal (450g)",
+      "id": "balparmak_bal",
+      "name": "Balparmak Süzme Çiçek Balı 460g",
+      "brand": "Balparmak",
+      "weight": "460g",
       "category": "Kahvaltılık",
+      "description": "Doğal süzme çiçek balı, cam kavanoz",
       "icon": "honey",
+      "barcode": "8690710000000",
       "prices": {
-        "B101": 149.90,
-        "DİM": 139.50,
-        "BAM": 154.00,
-        "Makros": 179.90,
-        "Trendiol": 159.00,
-        "Hepsimarka": 169.50
+        "B101": 199.90,
+        "DİM": 189.50,
+        "BAM": 204.00,
+        "Makros": 229.90,
+        "Trendiol": 209.00,
+        "Hepsimarka": 219.50
+      }
+    },
+    {
+      "id": "nescafe_gold",
+      "name": "Nescafé Gold 200g",
+      "brand": "Nescafé",
+      "weight": "200g",
+      "category": "İçecek",
+      "description": "Hazır granül kahve, orta sert içim",
+      "icon": "coffee",
+      "barcode": "7613036000000",
+      "prices": {
+        "B101": 219.90,
+        "DİM": 209.50,
+        "BAM": 224.00,
+        "Makros": 249.90,
+        "Trendiol": 234.00,
+        "Hepsimarka": 239.50
+      }
+    },
+    {
+      "id": "nutella_750",
+      "name": "Nutella Kakaolu Fındık Kreması 750g",
+      "brand": "Nutella",
+      "weight": "750g",
+      "category": "Kahvaltılık",
+      "description": "Kakaolu fındık kreması, cam kavanoz",
+      "icon": "chocolate",
+      "barcode": "8000500000000",
+      "prices": {
+        "B101": 184.90,
+        "DİM": 174.50,
+        "BAM": 189.00,
+        "Makros": 209.90,
+        "Trendiol": 194.00,
+        "Hepsimarka": 199.50
+      }
+    },
+    {
+      "id": "fairy_bulasik",
+      "name": "Fairy Elde Yıkama 1350ml",
+      "brand": "Fairy",
+      "weight": "1350ml",
+      "category": "Temizlik",
+      "description": "Elde bulaşık deterjanı, limon kokulu",
+      "icon": "detergent",
+      "barcode": "8001090000000",
+      "prices": {
+        "B101": 119.90,
+        "DİM": 109.50,
+        "BAM": 124.00,
+        "Makros": 139.90,
+        "Trendiol": 129.00,
+        "Hepsimarka": 134.50
+      }
+    },
+    {
+      "id": "erikli_su_6",
+      "name": "Erikli Su 6x1.5 Lt",
+      "brand": "Erikli",
+      "weight": "6x1.5 Lt",
+      "category": "İçecek",
+      "description": "Doğal kaynak suyu, 6'lı paket",
+      "icon": "water",
+      "barcode": "8690793100000",
+      "prices": {
+        "B101": 59.90,
+        "DİM": 54.50,
+        "BAM": 62.00,
+        "Makros": 69.90,
+        "Trendiol": 64.00,
+        "Hepsimarka": 67.50
       }
     }
   ],
@@ -425,38 +617,64 @@
     "B101": {
       "name": "B101",
       "color": "#E53935",
+      "bg_color": "#FFEBEE",
       "slogan": "Herkesin Marketi",
-      "type": "discount"
+      "type": "discount",
+      "logo_emoji": "🔴"
     },
     "DİM": {
       "name": "DİM",
       "color": "#1565C0",
+      "bg_color": "#E3F2FD",
       "slogan": "Hep Düşük Fiyat",
-      "type": "discount"
+      "type": "discount",
+      "logo_emoji": "🔵"
     },
     "BAM": {
       "name": "BAM",
       "color": "#7B1FA2",
+      "bg_color": "#F3E5F5",
       "slogan": "Ucuz ve Kaliteli",
-      "type": "discount"
+      "type": "discount",
+      "logo_emoji": "🟣"
     },
     "Makros": {
       "name": "Makros",
       "color": "#2E7D32",
+      "bg_color": "#E8F5E9",
       "slogan": "Her Şey Burada",
-      "type": "supermarket"
+      "type": "supermarket",
+      "logo_emoji": "🟢"
     },
     "Trendiol": {
       "name": "Trendiol",
       "color": "#F57C00",
+      "bg_color": "#FFF3E0",
       "slogan": "Online Alışverişin Adresi",
-      "type": "online"
+      "type": "online",
+      "logo_emoji": "🟠"
     },
     "Hepsimarka": {
       "name": "Hepsimarka",
       "color": "#FBC02D",
+      "bg_color": "#FFFDE7",
       "slogan": "Hepsi Markada",
-      "type": "online"
+      "type": "online",
+      "logo_emoji": "🟡"
     }
+  },
+  "categories": {
+    "Süt Ürünleri": {"emoji": "🧀", "color": "#FFF9C4"},
+    "Fırın Ürünleri": {"emoji": "🍞", "color": "#FFECB3"},
+    "Kahvaltılık": {"emoji": "🍳", "color": "#FFE0B2"},
+    "İçecek": {"emoji": "🥤", "color": "#B3E5FC"},
+    "Temel Gıda": {"emoji": "🌾", "color": "#DCEDC8"},
+    "Et & Tavuk": {"emoji": "🍗", "color": "#FFCDD2"},
+    "Meyve & Sebze": {"emoji": "🥬", "color": "#C8E6C9"},
+    "Temizlik": {"emoji": "🧹", "color": "#B2EBF2"},
+    "Bebek": {"emoji": "👶", "color": "#F8BBD0"},
+    "Atıştırmalık": {"emoji": "🍿", "color": "#FFE082"},
+    "Kişisel Bakım": {"emoji": "💆", "color": "#E1BEE7"},
+    "Bakliyat": {"emoji": "🫘", "color": "#D7CCC8"}
   }
 }

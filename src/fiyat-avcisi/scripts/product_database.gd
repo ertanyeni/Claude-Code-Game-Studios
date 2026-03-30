@@ -5,6 +5,7 @@ extends Node
 
 var products: Array[Dictionary] = []
 var stores: Dictionary = {}
+var categories: Dictionary = {}
 var _rng := RandomNumberGenerator.new()
 
 
@@ -30,6 +31,7 @@ func _load_data() -> void:
 	for p in raw_products:
 		products.append(p as Dictionary)
 	stores = data.get("stores", {})
+	categories = data.get("categories", {})
 
 
 func get_random_product() -> Dictionary:
@@ -95,3 +97,35 @@ func get_average_price(product: Dictionary) -> float:
 	for price in prices.values():
 		total += float(price)
 	return total / float(prices.size())
+
+
+func get_store_emoji(store_id: String) -> String:
+	var store: Dictionary = stores.get(store_id, {})
+	return store.get("logo_emoji", "🏪")
+
+
+func get_store_bg_color(store_id: String) -> Color:
+	var store: Dictionary = stores.get(store_id, {})
+	var hex: String = store.get("bg_color", "#F5F5F5")
+	return Color.html(hex)
+
+
+func get_category_emoji(cat_name: String) -> String:
+	var cat: Dictionary = categories.get(cat_name, {})
+	return cat.get("emoji", "📦")
+
+
+func get_product_display_name(product: Dictionary) -> String:
+	return product.get("name", "???")
+
+
+func get_product_brand(product: Dictionary) -> String:
+	return product.get("brand", "")
+
+
+func get_product_weight(product: Dictionary) -> String:
+	return product.get("weight", "")
+
+
+func get_product_description(product: Dictionary) -> String:
+	return product.get("description", "")

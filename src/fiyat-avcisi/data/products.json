@@ -1,0 +1,462 @@
+{
+  "products": [
+    {
+      "id": "sut_1lt",
+      "name": "Süt (1 Lt)",
+      "category": "Süt Ürünleri",
+      "icon": "milk",
+      "prices": {
+        "B101": 42.90,
+        "DİM": 41.50,
+        "BAM": 43.75,
+        "Makros": 47.90,
+        "Trendiol": 45.00,
+        "Hepsimarka": 46.50
+      }
+    },
+    {
+      "id": "ekmek",
+      "name": "Ekmek (Tam Buğday)",
+      "category": "Fırın",
+      "icon": "bread",
+      "prices": {
+        "B101": 18.00,
+        "DİM": 17.50,
+        "BAM": 19.00,
+        "Makros": 22.50,
+        "Trendiol": 21.00,
+        "Hepsimarka": 20.50
+      }
+    },
+    {
+      "id": "yumurta_15",
+      "name": "Yumurta (15'li)",
+      "category": "Kahvaltılık",
+      "icon": "egg",
+      "prices": {
+        "B101": 84.90,
+        "DİM": 82.50,
+        "BAM": 86.00,
+        "Makros": 94.90,
+        "Trendiol": 89.00,
+        "Hepsimarka": 91.50
+      }
+    },
+    {
+      "id": "peynir_beyaz",
+      "name": "Beyaz Peynir (500g)",
+      "category": "Süt Ürünleri",
+      "icon": "cheese",
+      "prices": {
+        "B101": 109.90,
+        "DİM": 104.50,
+        "BAM": 112.00,
+        "Makros": 129.90,
+        "Trendiol": 119.00,
+        "Hepsimarka": 124.50
+      }
+    },
+    {
+      "id": "zeytin_siyah",
+      "name": "Siyah Zeytin (500g)",
+      "category": "Kahvaltılık",
+      "icon": "olive",
+      "prices": {
+        "B101": 79.90,
+        "DİM": 74.50,
+        "BAM": 82.00,
+        "Makros": 94.90,
+        "Trendiol": 87.00,
+        "Hepsimarka": 89.50
+      }
+    },
+    {
+      "id": "cay_1kg",
+      "name": "Çay (1 Kg)",
+      "category": "İçecek",
+      "icon": "tea",
+      "prices": {
+        "B101": 189.90,
+        "DİM": 179.50,
+        "BAM": 194.00,
+        "Makros": 219.90,
+        "Trendiol": 199.00,
+        "Hepsimarka": 209.50
+      }
+    },
+    {
+      "id": "seker_1kg",
+      "name": "Toz Şeker (1 Kg)",
+      "category": "Temel Gıda",
+      "icon": "sugar",
+      "prices": {
+        "B101": 42.50,
+        "DİM": 39.90,
+        "BAM": 43.00,
+        "Makros": 48.90,
+        "Trendiol": 44.50,
+        "Hepsimarka": 46.00
+      }
+    },
+    {
+      "id": "un_2kg",
+      "name": "Un (2 Kg)",
+      "category": "Temel Gıda",
+      "icon": "flour",
+      "prices": {
+        "B101": 54.90,
+        "DİM": 49.50,
+        "BAM": 56.00,
+        "Makros": 64.90,
+        "Trendiol": 58.00,
+        "Hepsimarka": 61.50
+      }
+    },
+    {
+      "id": "ayc_yagi_1lt",
+      "name": "Ayçiçek Yağı (1 Lt)",
+      "category": "Temel Gıda",
+      "icon": "oil",
+      "prices": {
+        "B101": 109.90,
+        "DİM": 104.50,
+        "BAM": 112.00,
+        "Makros": 124.90,
+        "Trendiol": 114.00,
+        "Hepsimarka": 119.50
+      }
+    },
+    {
+      "id": "makarna_500g",
+      "name": "Makarna (500g)",
+      "category": "Temel Gıda",
+      "icon": "pasta",
+      "prices": {
+        "B101": 29.90,
+        "DİM": 27.50,
+        "BAM": 31.00,
+        "Makros": 36.90,
+        "Trendiol": 32.00,
+        "Hepsimarka": 34.50
+      }
+    },
+    {
+      "id": "pirinc_1kg",
+      "name": "Pirinç (1 Kg)",
+      "category": "Temel Gıda",
+      "icon": "rice",
+      "prices": {
+        "B101": 69.90,
+        "DİM": 64.50,
+        "BAM": 72.00,
+        "Makros": 84.90,
+        "Trendiol": 74.00,
+        "Hepsimarka": 79.50
+      }
+    },
+    {
+      "id": "tavuk_gogsu",
+      "name": "Tavuk Göğsü (1 Kg)",
+      "category": "Et & Tavuk",
+      "icon": "chicken",
+      "prices": {
+        "B101": 169.90,
+        "DİM": 159.50,
+        "BAM": 174.00,
+        "Makros": 199.90,
+        "Trendiol": 179.00,
+        "Hepsimarka": 189.50
+      }
+    },
+    {
+      "id": "domates_1kg",
+      "name": "Domates (1 Kg)",
+      "category": "Meyve & Sebze",
+      "icon": "tomato",
+      "prices": {
+        "B101": 34.90,
+        "DİM": 29.90,
+        "BAM": 36.00,
+        "Makros": 44.90,
+        "Trendiol": 39.00,
+        "Hepsimarka": 42.50
+      }
+    },
+    {
+      "id": "patates_1kg",
+      "name": "Patates (1 Kg)",
+      "category": "Meyve & Sebze",
+      "icon": "potato",
+      "prices": {
+        "B101": 24.90,
+        "DİM": 22.50,
+        "BAM": 26.00,
+        "Makros": 32.90,
+        "Trendiol": 28.00,
+        "Hepsimarka": 30.50
+      }
+    },
+    {
+      "id": "muz_1kg",
+      "name": "Muz (1 Kg)",
+      "category": "Meyve & Sebze",
+      "icon": "banana",
+      "prices": {
+        "B101": 64.90,
+        "DİM": 59.50,
+        "BAM": 67.00,
+        "Makros": 79.90,
+        "Trendiol": 69.00,
+        "Hepsimarka": 74.50
+      }
+    },
+    {
+      "id": "deterjan_3lt",
+      "name": "Çamaşır Deterjanı (3 Lt)",
+      "category": "Temizlik",
+      "icon": "detergent",
+      "prices": {
+        "B101": 159.90,
+        "DİM": 149.50,
+        "BAM": 164.00,
+        "Makros": 184.90,
+        "Trendiol": 169.00,
+        "Hepsimarka": 174.50
+      }
+    },
+    {
+      "id": "tuvalet_kagidi_24",
+      "name": "Tuvalet Kağıdı (24'lü)",
+      "category": "Temizlik",
+      "icon": "paper",
+      "prices": {
+        "B101": 219.90,
+        "DİM": 209.50,
+        "BAM": 224.00,
+        "Makros": 249.90,
+        "Trendiol": 229.00,
+        "Hepsimarka": 239.50
+      }
+    },
+    {
+      "id": "bebek_bezi_40",
+      "name": "Bebek Bezi (40'lı)",
+      "category": "Bebek",
+      "icon": "diaper",
+      "prices": {
+        "B101": 289.90,
+        "DİM": 274.50,
+        "BAM": 294.00,
+        "Makros": 329.90,
+        "Trendiol": 299.00,
+        "Hepsimarka": 314.50
+      }
+    },
+    {
+      "id": "kola_1lt",
+      "name": "Kola (1 Lt)",
+      "category": "İçecek",
+      "icon": "cola",
+      "prices": {
+        "B101": 39.90,
+        "DİM": 37.50,
+        "BAM": 41.00,
+        "Makros": 44.90,
+        "Trendiol": 42.00,
+        "Hepsimarka": 43.50
+      }
+    },
+    {
+      "id": "kahve_100g",
+      "name": "Türk Kahvesi (100g)",
+      "category": "İçecek",
+      "icon": "coffee",
+      "prices": {
+        "B101": 74.90,
+        "DİM": 69.50,
+        "BAM": 77.00,
+        "Makros": 89.90,
+        "Trendiol": 79.00,
+        "Hepsimarka": 84.50
+      }
+    },
+    {
+      "id": "cikolata_bar",
+      "name": "Çikolata Bar (80g)",
+      "category": "Atıştırmalık",
+      "icon": "chocolate",
+      "prices": {
+        "B101": 24.90,
+        "DİM": 22.50,
+        "BAM": 26.00,
+        "Makros": 29.90,
+        "Trendiol": 27.00,
+        "Hepsimarka": 28.50
+      }
+    },
+    {
+      "id": "cips_paket",
+      "name": "Cips (150g)",
+      "category": "Atıştırmalık",
+      "icon": "chips",
+      "prices": {
+        "B101": 42.90,
+        "DİM": 39.50,
+        "BAM": 44.00,
+        "Makros": 49.90,
+        "Trendiol": 45.00,
+        "Hepsimarka": 47.50
+      }
+    },
+    {
+      "id": "sampuan_400ml",
+      "name": "Şampuan (400ml)",
+      "category": "Kişisel Bakım",
+      "icon": "shampoo",
+      "prices": {
+        "B101": 119.90,
+        "DİM": 109.50,
+        "BAM": 124.00,
+        "Makros": 139.90,
+        "Trendiol": 129.00,
+        "Hepsimarka": 134.50
+      }
+    },
+    {
+      "id": "dis_macunu",
+      "name": "Diş Macunu (100ml)",
+      "category": "Kişisel Bakım",
+      "icon": "toothpaste",
+      "prices": {
+        "B101": 64.90,
+        "DİM": 59.50,
+        "BAM": 67.00,
+        "Makros": 74.90,
+        "Trendiol": 69.00,
+        "Hepsimarka": 72.50
+      }
+    },
+    {
+      "id": "yogurt_1kg",
+      "name": "Yoğurt (1 Kg)",
+      "category": "Süt Ürünleri",
+      "icon": "yogurt",
+      "prices": {
+        "B101": 59.90,
+        "DİM": 54.50,
+        "BAM": 62.00,
+        "Makros": 69.90,
+        "Trendiol": 64.00,
+        "Hepsimarka": 67.50
+      }
+    },
+    {
+      "id": "tereyag_250g",
+      "name": "Tereyağı (250g)",
+      "category": "Süt Ürünleri",
+      "icon": "butter",
+      "prices": {
+        "B101": 84.90,
+        "DİM": 79.50,
+        "BAM": 87.00,
+        "Makros": 99.90,
+        "Trendiol": 89.00,
+        "Hepsimarka": 94.50
+      }
+    },
+    {
+      "id": "nohut_1kg",
+      "name": "Nohut (1 Kg)",
+      "category": "Bakliyat",
+      "icon": "chickpea",
+      "prices": {
+        "B101": 54.90,
+        "DİM": 49.50,
+        "BAM": 57.00,
+        "Makros": 64.90,
+        "Trendiol": 59.00,
+        "Hepsimarka": 62.50
+      }
+    },
+    {
+      "id": "mercimek_1kg",
+      "name": "Kırmızı Mercimek (1 Kg)",
+      "category": "Bakliyat",
+      "icon": "lentil",
+      "prices": {
+        "B101": 59.90,
+        "DİM": 54.50,
+        "BAM": 62.00,
+        "Makros": 69.90,
+        "Trendiol": 64.00,
+        "Hepsimarka": 67.50
+      }
+    },
+    {
+      "id": "salca_700g",
+      "name": "Domates Salçası (700g)",
+      "category": "Temel Gıda",
+      "icon": "paste",
+      "prices": {
+        "B101": 64.90,
+        "DİM": 59.50,
+        "BAM": 67.00,
+        "Makros": 79.90,
+        "Trendiol": 69.00,
+        "Hepsimarka": 74.50
+      }
+    },
+    {
+      "id": "bal_450g",
+      "name": "Süzme Bal (450g)",
+      "category": "Kahvaltılık",
+      "icon": "honey",
+      "prices": {
+        "B101": 149.90,
+        "DİM": 139.50,
+        "BAM": 154.00,
+        "Makros": 179.90,
+        "Trendiol": 159.00,
+        "Hepsimarka": 169.50
+      }
+    }
+  ],
+  "stores": {
+    "B101": {
+      "name": "B101",
+      "color": "#E53935",
+      "slogan": "Herkesin Marketi",
+      "type": "discount"
+    },
+    "DİM": {
+      "name": "DİM",
+      "color": "#1565C0",
+      "slogan": "Hep Düşük Fiyat",
+      "type": "discount"
+    },
+    "BAM": {
+      "name": "BAM",
+      "color": "#7B1FA2",
+      "slogan": "Ucuz ve Kaliteli",
+      "type": "discount"
+    },
+    "Makros": {
+      "name": "Makros",
+      "color": "#2E7D32",
+      "slogan": "Her Şey Burada",
+      "type": "supermarket"
+    },
+    "Trendiol": {
+      "name": "Trendiol",
+      "color": "#F57C00",
+      "slogan": "Online Alışverişin Adresi",
+      "type": "online"
+    },
+    "Hepsimarka": {
+      "name": "Hepsimarka",
+      "color": "#FBC02D",
+      "slogan": "Hepsi Markada",
+      "type": "online"
+    }
+  }
+}

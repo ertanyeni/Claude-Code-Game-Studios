@@ -109,7 +109,7 @@ static func make_button(parent: Control, text: String, color: Color = COLORS.acc
 
 
 static func make_store_button(parent: Control, store_id: String, db: Node) -> Button:
-	var color := db.get_store_color(store_id)
+	var color: Color = db.get_store_color(store_id)
 	var emoji: String = db.get_store_emoji(store_id)
 	var name: String = db.get_store_name(store_id)
 	var btn := make_button(parent, "%s  %s" % [emoji, name], color, 68)
@@ -221,7 +221,7 @@ static func make_product_card(parent: Control, product: Dictionary, db: Node, sh
 
 	# Fiyat (opsiyonel)
 	if show_price and store_id != "":
-		var price := db.get_price(product, store_id)
+		var price: float = db.get_price(product, store_id)
 		make_label(vbox, "₺%.2f" % price, 28, COLORS.accent_yellow)
 
 	return card
